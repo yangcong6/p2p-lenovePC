@@ -1,30 +1,50 @@
 // 变量定义
-@color-f6: #f6f6f6;
-@color-FF: #FF782D;
+
 
 
 // 函数定义
 .flexSb() {
     display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display: -ms-flex;
     justify-content: space-between;
     align-items: center;
 }
+
+
+
 
 //header
 header {
     height: 36px;
     line-height: 36px;
-    background-color: @color-f6;
+    background-color: #f6f6f6;
 
     div {
         .flexSb();
-        ul{
+
+        span {
+            font-size: 12px;
+        }
+
+        ul {
             margin: 0;
             .flexSb();
-            li{
+
+            li {
                 padding-left: 40px;
                 list-style: none;
-                a{
+
+                &:hover {
+                    a {
+                        color: #FF782D;
+                        text-decoration: none;
+                    }
+                }
+
+                a {
                     font-size: 12px;
                     text-decoration: none;
                     color: #000;
@@ -37,22 +57,52 @@ header {
 }
 
 //logo 菜单
-.logo{
-    height: 68px;
-    line-height: 68px;
-    img{
-        width: 84px;
-        height: 34px;
-    }
-    div{
+.logo {
+    height: 60px;
+    div {
+        height: 60px;
         .flexSb();
-
-        ul{
+        img {
+            width: 84px;
+            height: 34px;
+        }
+        ul {
             margin: 0;
             .flexSb();
-            li{
-                margin-left: 40px;
-            };
+
+            li {
+                padding: 0 14px;
+                margin: 0 5px;
+                height: 60px;
+                line-height: 60px;
+                &.active{
+                   
+                    color: #FF782D;
+                    border-bottom: 2px solid #FF782D;
+
+                }
+                a {
+                    color: #000;
+                }
+
+                &:hover {
+                    border-bottom: 2px solid #FF782D;
+                    box-sizing: border-box;
+
+                    a {
+                        color: #FF782D;
+                        text-decoration: none;
+                    }
+                }
+            }
+            span{
+                padding-left: 46px;
+                a{
+                    cursor: pointer;
+
+                    text-decoration: none;
+                }
+            }
         }
     }
 }

@@ -1,0 +1,58 @@
+// 变量定义
+@color-f6: #f6f6f6;
+@color-FF: #FF782D;
+
+
+// 函数定义
+.flexSb() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+//header
+header {
+    height: 36px;
+    line-height: 36px;
+    background-color: @color-f6;
+
+    div {
+        .flexSb();
+        ul{
+            margin: 0;
+            .flexSb();
+            li{
+                padding-left: 40px;
+                list-style: none;
+                a{
+                    font-size: 12px;
+                    text-decoration: none;
+                    color: #000;
+                    list-style: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+//logo 菜单
+.logo{
+    height: 68px;
+    line-height: 68px;
+    img{
+        width: 84px;
+        height: 34px;
+    }
+    div{
+        .flexSb();
+
+        ul{
+            margin: 0;
+            .flexSb();
+            li{
+                margin-left: 40px;
+            };
+        }
+    }
+}
